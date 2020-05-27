@@ -14,7 +14,8 @@ static const Block blocks[] = {
 	{"",	"dwm_tlp",	0,	6},
 	{"",	"battery",	150,	12},
 	{"ﯓ",	"uptime | awk '{print $3}' | sed 's/,//g'",	60,	1},
-	{"",	"clock",	60,	1},
+	{"",	"s-date",	0,	0},
+	{"",	"clock",	1,	0},
 };
 
 static char delim = '|';
