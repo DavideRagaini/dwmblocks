@@ -1,18 +1,19 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	/* {"",	"news",		0,	6}, */
-	/* {"",	"torrent",	20,	7}, */
-	{"",	"music",	300,	11},
-	{"",	"cpu",		5,	5},
-	{"",	"memory",	10,	5},
+	{"",	"music",	0,	11},
+	{"",	"spt",		60,	11},
+	{"",	"news",		0,	6},
+	/* {"",	"cpu",		5,	5}, */
+	{"",	"memory",	25,	5},
 	/* {"",	"weather",	18000,	5}, */
-	/* {"龍",	"nettraf",	5,	16}, */
+	/* {"",	"torrent",	20,	7}, */
+	/* {"",	"nettraf",	5,	16}, */
 	{"",	"[ \"$(rfkill | grep hci0 | awk '{print $4}')\" = \"unblocked\" ] && printf \"\"",	0,	12},
-	{"",	"internet",	10,	12},
-	{"",	"volume",	0,	10},
+	{"",	"internet",	10,	16},
+	{"",	"volume-p",	0,	10},
 	{"",	"xbacklight | cut -d. -f1",	0,	6},
-	{"",	"dwm_tlp",	0,	6},
-	{"",	"battery",	150,	12},
+	{"",	"[ \"$(sudo tlp-stat -s | grep Mode | awk '{print $3}')\" = \"AC\" ] && printf \"\"",	0,	6},
+	{"",	"battery",	60,	12},
 	{"ﯓ",	"uptime | awk '{print $3}' | sed 's/,//g'",	60,	1},
 	{"",	"s-date",	0,	0},
 	{"",	"clock",	1,	0},
