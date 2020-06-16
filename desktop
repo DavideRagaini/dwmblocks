@@ -1,17 +1,24 @@
 static const Block blocks[] = {
-	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"",	"news",		0,	6},
-	{"",	"torrent",	20,	7},
-	{"",	"music",	300,	11},
-	/* {"",	"cpu",		5,	12}, */
-	{"",	"memory",	10,	12},
-	/* {"",	"weather",	18000,	5}, */
-	/* {"龍",	"nettraf",	5,	16}, */
-	/* {"",	"xrandr -q | grep current | awk '{print $8$9$10}' | sed 's/,//g'",	0,	8}, */
-	{"",	"sink",		0,	7},
+	/*Icon*/	/*Command*/	/*Update Interval*/	/*Update Signal*/
+	{"",	"music",	0,	11},
+	{"",	"spt",		60,	11},
+	{"",	"news",		0,	6},
+	{"",	"memory",	25,	12},
+	{"ﳃ",	"sink",		0,	7},
 	{"",	"volume",	0,	10},
 	{"ﯓ",	"uptime | awk '{print $3}' | sed 's/,//g'",	60,	1},
-	{"",	"s-date",	0,	0},
-	{"",	"clock",	1,	0},
+	{"",	"s-date",	0,	0}, /**/
+	{"",	"clock",	1,	0}, /**/
 };
+
 static char delim = '|'; // NULL character ('\0') means no delimeter.
+
+	/* {"",	"msbd",		0,	11}, */
+	/* {"",	"torrent",	0,	7}, */
+	/* {"",	"cpu",		1,	12}, */
+	/* {"ﳻ",	"nvgpu",	1,	12}, */
+	/* {"",	"weather",	18000,	5}, */
+	/* {"",	"nettraf",	5,	16}, */
+	/* {"",	"xrandr -q | grep current | awk '{print $8$9$10}' | sed 's/,//g'",	0,	8}, */
+	/* {"",	"cat /sys/class/net/enp2s0/operstate| sed \"s/down/❎/;s/up/🌐/\"",	60,	7}, */
+
