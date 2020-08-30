@@ -1,24 +1,25 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/	/*Update Interval*/	/*Update Signal*/
 	{"",	"music",	0,	11},
-	{"",	"spt",		60,	11},
-	{"",	"news",		0,	6},
-	{"",	"memory",	25,	12},
+	{"",	"cat $XDG_CACHE_HOME/stbspt",		0,	12},
+	{"",	"cpu",		5,	0},
+	{"",	"cpubars",	5,	0},
+	{"ﳻ",	"nvgpu",	15,	0},
+	{"",	"memory",	15,	0},
+	/* {"",	"nettraf",	1,	16}, */
 	{"ﳃ",	"sink",		0,	7},
 	{"",	"volume",	0,	10},
-	{"ﯓ",	"uptime | awk '{print $3}' | sed 's/,//g'",	60,	1},
+	{"ﯓ",	"uptime | awk 'sub(\",\",\"\",$3) {print $3}' ",	60,	1},
 	{"",	"s-date",	0,	0}, /**/
 	{"",	"clock",	1,	0}, /**/
 };
 
 static char delim = '|'; // NULL character ('\0') means no delimeter.
 
+	/* {"",	"news",		0,	6}, */
 	/* {"",	"msbd",		0,	11}, */
 	/* {"",	"torrent",	0,	7}, */
-	/* {"",	"cpu",		1,	12}, */
-	/* {"ﳻ",	"nvgpu",	1,	12}, */
 	/* {"",	"weather",	18000,	5}, */
-	/* {"",	"nettraf",	5,	16}, */
 	/* {"",	"xrandr -q | grep current | awk '{print $8$9$10}' | sed 's/,//g'",	0,	8}, */
 	/* {"",	"cat /sys/class/net/enp2s0/operstate| sed \"s/down/❎/;s/up/🌐/\"",	60,	7}, */
 
