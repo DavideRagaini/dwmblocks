@@ -1,25 +1,27 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/	/*Update Interval*/	/*Update Signal*/
 	{"",	"music",	0,	11},
-	{"",	"cat $XDG_CACHE_HOME/stbspt",		0,	12},
-	{"",	"cpu",		5,	0},
+	{"",	"spt",	0,	12},
 	{"",	"cpubars",	5,	0},
-	{"ﳻ",	"nvgpu",	15,	0},
+	{"",	"cpu",		5,	0},
 	{"",	"memory",	15,	0},
-	/* {"",	"nettraf",	1,	16}, */
+	{"ﳻ",	"nvgpu",	15,	0},
 	{"ﳃ",	"sink",		0,	7},
 	{"",	"volume",	0,	10},
 	{"ﯓ",	"uptime | awk 'sub(\",\",\"\",$3) {print $3}' ",	60,	1},
 	{"",	"s-date",	0,	0}, /**/
-	{"",	"clock",	1,	0}, /**/
+	{"",	"clock",	60,	0}, /**/
 };
 
 static char delim = '|'; // NULL character ('\0') means no delimeter.
 
+	/* {"",	"pmdclock info --format \"%T%i %r\" | sed \"s/^Not tasks.*$//g\"",	11,	0}, */
+	/* {"",	"cat $XDG_CACHE_HOME/stbspt",		0,	12}, */
+	/* {"",	"nettraf",	1,	16}, */
 	/* {"",	"news",		0,	6}, */
 	/* {"",	"msbd",		0,	11}, */
 	/* {"",	"torrent",	0,	7}, */
 	/* {"",	"weather",	18000,	5}, */
-	/* {"",	"xrandr -q | grep current | awk '{print $8$9$10}' | sed 's/,//g'",	0,	8}, */
+	/* {"",	"xrandr -q | awk '/current/ {print $8$9$10}' | sed 's/,//g'",	0,	8}, */
 	/* {"",	"cat /sys/class/net/enp2s0/operstate| sed \"s/down/❎/;s/up/🌐/\"",	60,	7}, */
 
